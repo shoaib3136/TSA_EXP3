@@ -87,5 +87,5 @@ plt.show()
 #### AUTOREGRESSIVE MODEL FOR CONSUMPTION PREDICTION
 ![GRAPH](image5.png)
 
-### RESULT:
+### RESULT: 
 Thus, The python code for implementing auto correlation for power consumption is successfully executed.
