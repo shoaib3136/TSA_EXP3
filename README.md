@@ -49,7 +49,7 @@ from statsmodels.graphics.tsaplots import plot_acf
 from statsmodels.tsa.api import AutoReg
 from sklearn.metrics import mean_absolute_error, mean_squared_error
  
-lag_order = 1 
+lag_order = 35 
 ar_model = AutoReg(y_train, lags=lag_order)
 ar_results = ar_model.fit()
 import statistics
