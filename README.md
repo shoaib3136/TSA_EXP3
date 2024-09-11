@@ -1,6 +1,7 @@
-# Ex.No: 03   COMPUTE THE AUTO FUNCTION(ACF)
 ### Developed By: Shaik Shoaib Nawaz
 ### Register No: 212222240094
+
+# Ex.No: 03   COMPUTE THE AUTO FUNCTION(ACF)
 ### Date: 
 
 ### AIM:
@@ -53,9 +54,14 @@ plt.figure(figsize=(12, 6))
 plot_acf(data['Consumption'], lags=35)
 plt.title('ACF of Consumption Data (First 35 Lags)')
 plt.show()
-
 # Fit an autoregressive model (AR)
 lag_order = 1  # you can adjust based on the ACF plot
+data['Consumption'].corr(data['Consumption'].shift(1))
+from statsmodels.tsa.ar_model import AutoReg
+from statsmodels.graphics.tsaplots import plot_acf
+from statsmodels.tsa.api import AutoReg
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+lag_order = 35 
 ar_model = AutoReg(y_train, lags=lag_order)
 ar_results = ar_model.fit()
 
