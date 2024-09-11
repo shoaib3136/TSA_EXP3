@@ -76,17 +76,6 @@ variance = np.var(y_test)
 print(f'Mean Absolute Error: {mae:.2f}')
 print(f'Root Mean Squared Error: {rmse:.2f}')
 print(f'Variance_testing: {variance:.2f}')
-
-# Plot actual vs predicted consumption
-plt.figure(figsize=(12, 6))
-plt.plot(test_data.index, y_test, label='Actual Consumption')
-plt.plot(test_data.index, y_pred, label='Predicted Consumption', linestyle='--')
-plt.xlabel('TxnDate')
-plt.ylabel('Consumption')
-plt.legend()
-plt.title('Consumption Prediction with Autoregressive Model')
-plt.show()
-
 ```
 
 ### OUTPUT:
